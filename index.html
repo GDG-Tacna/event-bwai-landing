@@ -1,219 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<html class="dark" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GDG TACNA | AI SEASON 2026</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "outline": "#ac8889",
-              "secondary-container": "#00a572",
-              "primary": "#ffb3b6",
-              "on-primary": "#68001a",
-              "on-secondary-fixed": "#002113",
-              "secondary-fixed-dim": "#4edea3",
-              "surface-container": "#201f1f",
-              "outline-variant": "#5c3f40",
-              "surface-tint": "#ffb3b6",
-              "surface-container-low": "#1c1b1b",
-              "primary-fixed-dim": "#ffb3b6",
-              "on-background": "#e5e2e1",
-              "on-surface-variant": "#e5bdbe",
-              "surface": "#131313",
-              "secondary": "#10B981",
-              "tertiary": "#c4c7c9",
-              "inverse-on-surface": "#313030",
-              "error": "#ffb4ab",
-              "surface-container-lowest": "#0e0e0e",
-              "background": "#131313",
-              "on-error": "#690005",
-              "on-tertiary-fixed": "#191c1e",
-              "surface-bright": "#3a3939",
-              "surface-dim": "#131313",
-              "on-error-container": "#ffdad6",
-              "on-tertiary-fixed-variant": "#444749",
-              "on-tertiary": "#2d3133",
-              "error-container": "#93000a",
-              "tertiary-fixed": "#e0e3e5",
-              "secondary-fixed": "#6ffbbe",
-              "inverse-primary": "#be0037",
-              "on-secondary-container": "#00311f",
-              "surface-variant": "#353534",
-              "surface-container-highest": "#353534",
-              "primary-container": "#e11d48",
-              "tertiary-container": "#717476",
-              "on-secondary-fixed-variant": "#005236",
-              "on-primary-container": "#fffaf9",
-              "tertiary-fixed-dim": "#c4c7c9",
-              "primary-fixed": "#ffdada",
-              "surface-container-high": "#2a2a2a",
-              "on-tertiary-container": "#f9fbfd",
-              "on-surface": "#e5e2e1",
-              "on-secondary": "#003824",
-              "on-primary-fixed-variant": "#920028",
-              "on-primary-fixed": "#40000c",
-              "inverse-surface": "#e5e2e1"
-            },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Space Grotesk"],
-              "label": ["Space Grotesk"]
-            },
-            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
-          },
-        },
+    <!-- Primary Meta Tags -->
+    <title>GDG TACNA | AI SEASON 2026</title>
+    <meta name="title" content="GDG TACNA | AI SEASON 2026" />
+    <meta
+      name="description"
+      content="Únete a la temporada de Inteligencia Artificial con Google Developer Groups Tacna. Construye soluciones reales con Gemini y asiste a nuestros eventos y talleres."
+    />
+    <meta
+      name="keywords"
+      content="GDG Tacna, Google Developer Groups, IA, Inteligencia Artificial, Gemini, Tacna, Perú, Eventos de tecnología, Build with AI"
+    />
+    <meta name="author" content="GDG Tacna" />
+    <meta name="theme-color" content="#131313" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gdgtacna.com/" />
+    <meta property="og:title" content="GDG TACNA | AI SEASON 2026" />
+    <meta
+      property="og:description"
+      content="Únete a la temporada de Inteligencia Artificial con Google Developer Groups Tacna. Construye soluciones reales con Gemini y asiste a nuestros eventos y talleres."
+    />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gdgtacna.com/" />
+    <meta property="twitter:title" content="GDG TACNA | AI SEASON 2026" />
+    <meta
+      property="twitter:description"
+      content="Únete a la temporada de Inteligencia Artificial con Google Developer Groups Tacna. Construye soluciones reales con Gemini y asiste a nuestros eventos y talleres."
+    />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <!-- Google Fonts Optimization (Preconnect & Preload to avoid FOIT) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload Space Grotesk -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+
+    <!-- Preload Material Symbols -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+
+    <!-- Fallback for no-js -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      />
+    </noscript>
+
+    <!-- Google Analytics (GA4) -->
+    <!-- TODO: Reemplaza 'G-XXXXXXXXXX' con el Measurement ID real de la propiedad de GA4 de GDG Tacna -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
+      gtag('js', new Date());
+
+      // Configuración por defecto de GA4
+      gtag('config', 'G-XXXXXXXXXX', {
+        send_page_view: true,
+      });
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .scanline {
-            background: linear-gradient(to bottom, transparent 50%, rgba(225, 29, 72, 0.03) 50%);
-            background-size: 100% 4px;
-        }
-        .cursor-blink {
-            animation: blink 1s step-end infinite;
-        }
-        @keyframes blink {
-            from, to { opacity: 1; }
-            50% { opacity: 0; }
-        }
-    </style>
-</head>
-<body class="bg-[#080808] text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden scanline min-h-screen">
-<!-- Top Navigation Bar -->
-<header class="bg-[#131313] text-[#E11D48] font-['Space_Grotesk'] tracking-tighter uppercase font-bold docked full-width top-0 border-b-0 flex justify-between items-center w-full px-6 py-4 border-b border-white/10 sticky z-50">
-<div class="text-xl font-black text-[#E11D48] tracking-widest flex items-center gap-2">
-<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
-            &gt; GDG_TACNA
-        </div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-[#E11D48] before:content-['&gt;'] before:mr-1 transition-transform active:scale-95" href="#">EVENTS</a>
-<a class="text-white/60 hover:text-white transition-colors hover:bg-[#E11D48]/10 px-2 py-1 active:scale-95" href="#">DOCS</a>
-<a class="text-white/60 hover:text-white transition-colors hover:bg-[#E11D48]/10 px-2 py-1 active:scale-95" href="#">SOURCE</a>
-</nav>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#E11D48] cursor-pointer" data-icon="terminal">terminal</span>
-</div>
-</header>
-<main class="max-w-6xl mx-auto px-6 py-12 md:py-24">
-<!-- Header Banner Section -->
-<section class="mb-16 border-l-4 border-primary-container pl-6 py-2">
-<p class="text-primary-container font-mono tracking-widest text-sm mb-2 opacity-80 uppercase">// Bienvenido a GDG Tacna - AI Season 2026.</p>
-<div class="relative inline-block">
-<h1 class="text-5xl md:text-8xl font-black tracking-tighter text-on-surface uppercase leading-none">
-                    GDG_TACNA<span class="text-primary-container">.</span>AI
-                </h1>
-<div class="absolute -top-4 -right-8 bg-secondary px-2 py-0.5 text-[10px] text-on-secondary font-bold tracking-widest">STABLE_BUILD_2026</div>
-</div>
-</section>
-<!-- Hero Prompt Section -->
-<section class="mb-24 space-y-4">
-<div class="bg-surface-container-lowest p-6 border border-outline-variant/20 shadow-[0_0_30px_rgba(225,29,72,0.05)]">
-<div class="flex items-center gap-2 text-primary-container font-mono mb-2">
-<span class="text-secondary">invitado@gdgtacna:~$</span>
-<span class="text-on-surface">gemini deploy --event 'build with ai'</span>
-<span class="w-3 h-6 bg-primary-container cursor-blink inline-block align-middle ml-1"></span>
-</div>
-<div class="font-mono text-secondary/80 ml-4 space-y-1">
-<p>&gt; Cargando módulos de Tacna... [OK]</p>
-<p>&gt; Inicializando entorno de ejecución... [OK]</p>
-<p>&gt; Verificando conectividad local... [OK]</p>
-<p class="text-primary-container">&gt; ACCESO CONCEDIDO: DESPLEGANDO EVENTOS_2026</p>
-</div>
-</div>
-</section>
-<!-- Events Section -->
-<section class="mb-24">
-<div class="flex items-center gap-3 mb-12">
-<span class="text-primary-container font-mono text-xl">&gt;</span>
-<h2 class="text-3xl font-bold tracking-tight uppercase">./listar_eventos_ia --tacna</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Card 1 -->
-<div class="group relative bg-surface border border-[#064e3b] hover:border-secondary transition-all p-8 flex flex-col justify-between min-h-[320px]">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
-<span class="material-symbols-outlined text-7xl" data-icon="memory">memory</span>
-</div>
-<div>
-<div class="text-[10px] font-mono text-secondary mb-4 tracking-widest uppercase">bash install-dependencies.sh</div>
-<h3 class="text-2xl font-bold text-on-surface mb-2 uppercase leading-tight">Road to Build with AI Tacna 2026</h3>
-<p class="text-on-surface-variant text-sm mb-6 max-w-xs">Preparación técnica intensiva y configuración de entornos para la temporada de IA.</p>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex items-center gap-2 text-on-surface font-mono text-sm">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="calendar_today">calendar_today</span>
-                            28 de Marzo, 2026
-                        </div>
-<div class="flex items-center gap-2 text-on-surface font-mono text-sm">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="settings">settings</span>
-                            Prep session
-                        </div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="group relative bg-surface border border-[#064e3b] hover:border-secondary transition-all p-8 flex flex-col justify-between min-h-[320px]">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
-<span class="material-symbols-outlined text-7xl" data-icon="smart_toy">smart_toy</span>
-</div>
-<div>
-<div class="text-[10px] font-mono text-secondary mb-4 tracking-widest uppercase">gemini run build-with-ai.py --project 'tacna'</div>
-<h3 class="text-2xl font-bold text-on-surface mb-2 uppercase leading-tight">Build with AI Tacna 2026</h3>
-<p class="text-on-surface-variant text-sm mb-6 max-w-xs">El evento principal donde construiremos soluciones reales utilizando modelos de Gemini.</p>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex items-center gap-2 text-on-surface font-mono text-sm">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="event">event</span>
-                            11 de Abril, 2026
-                        </div>
-<div class="flex items-center gap-2 text-on-surface font-mono text-sm">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="stars">stars</span>
-                            Main event
-                        </div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="max-w-3xl mx-auto text-center border-t border-white/5 pt-20">
-<div class="flex items-center justify-center gap-2 text-primary-container font-mono mb-8 text-sm md:text-base">
-<span class="text-secondary">invitado@gdgtacna:~$</span>
-<span class="text-on-surface">join_event --confirm</span>
-</div>
-<button class="group relative w-full overflow-hidden">
-<div class="bg-surface-container border border-outline-variant/30 px-6 py-8 text-on-surface font-mono text-lg md:text-2xl hover:bg-primary-container hover:text-on-primary-container transition-all cursor-pointer">
-<pre class="whitespace-pre-wrap font-mono uppercase tracking-tighter">[ HAZ CLIC AQUÍ PARA REGISTRARTE Y RESERVAR TU LUGAR ]
-                    </pre>
-</div>
-<div class="absolute inset-0 bg-primary-container/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-</button>
-<p class="mt-6 text-on-surface-variant font-mono text-xs uppercase tracking-widest opacity-50">Cupos limitados. Módulos de IA en proceso de asignación.</p>
-</section>
-</main>
-<!-- Footer Section -->
-<footer class="bg-[#0E0E0E] font-mono text-sm tracking-mono w-full px-6 py-12 flex flex-col md:flex-row justify-between items-start gap-8 border-t border-white/5 mt-20">
-<div class="space-y-4">
-<div class="text-[#10B981] font-bold text-lg uppercase">Organizado por Google Developer Group Tacna. 2026.</div>
-<div class="flex gap-6">
-<a class="text-white/40 hover:text-[#E11D48] transition-colors uppercase" href="#">GITHUB</a>
-<a class="text-white/40 hover:text-[#E11D48] transition-colors uppercase" href="#">COMMUNITY_GUIDELINES</a>
-<a class="text-white/40 hover:text-[#E11D48] transition-colors uppercase" href="#">CONTACT</a>
-</div>
-</div>
-<div class="flex flex-col items-end gap-2">
-<div class="text-white/20 text-xs">VERSION: 4.2.0-TACNA</div>
-<div class="text-[#10B981] font-mono flex items-center">
-                invitado@gdgtacna:~$ _ <span class="w-2 h-4 bg-[#10B981] cursor-blink inline-block ml-1"></span>
-</div>
-</div>
-</footer>
-</body></html>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,27 +1,73 @@
-# 🚀 Build with AI Tacna 2026 - Landing Page
+# React + TypeScript + Vite
 
-Esta es la página oficial de aterrizaje para la temporada de Inteligencia Artificial del **GDG Tacna**. Este proyecto ha sido desarrollado íntegramente utilizando el ecosistema de IA de Google, demostrando un flujo de trabajo de **Desarrollo Guiado por IA (AIDD)**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 📍 Nuestra Misión
-Impulsar el uso de herramientas de IA generativa y el CLI de Gemini en la comunidad tecnológica de la Ciudad Heroica.
+Currently, two official plugins are available:
 
-## 📅 Calendario de Eventos
-| Evento | Fecha | Estado |
-| :--- | :--- | :--- |
-| **Road to Build with AI Tacna** | 28/03/2026 | 🛠️ Preparación |
-| **Build with AI Tacna** | 11/04/2026 | 🔥 Evento Principal |
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🛠️ Flujo de Creación (Ecosistema Google)
-Para este proyecto seguimos el "Camino del Desarrollador de IA":
-1.  **Ideación:** Concepto de "Terminal Tacneña" definido con **Gemini**.
-2.  **Prototipado:** Diseño visual y UI generado en **Stitch** con estética CLI.
-3.  **Automatización:** Implementación de código y gestión de Pull Requests mediante el agente **Jules**.
-4.  **Refinamiento:** Ajustes finales y optimización en **Antigravity**.
+## React Compiler
 
-## 💻 Stack Técnico
-- **Framework:** React / HTML5 (Generado por IA)
-- **Estilos:** Tailwind CSS (Paleta: Negro Mate, Verde Neón y Buganvilla Tacneño)
-- **Despliegue:** [Tu link de deploy aquí una vez que lo tengamos]
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
-*Organizado con ❤️ por el equipo de **GDG Tacna**. 2026.*
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+]);
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+]);
+```
