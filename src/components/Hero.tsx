@@ -1,7 +1,41 @@
 import { TerminalCursor } from '@/components/TerminalCursor';
 import { AsciiArt } from '@/components/AsciiArt';
+import { useState, useEffect } from 'react';
 
 export const Hero = () => {
+  const [typedText, setTypedText] = useState(['', '', '', '']);
+
+  useEffect(() => {
+    const lines = [
+      '> Cargando módulos de Tacna [OK]',
+      '> Inicializando entorno de ejecución [OK]',
+      '> Verificando conectividad local [OK]',
+      '> ACCESO CONCEDIDO: DESPLEGANDO EVENTOS_2026',
+    ];
+    let currentLine = 0;
+    let currentChar = 0;
+
+    const interval = setInterval(() => {
+      if (currentLine < lines.length) {
+        if (currentChar < lines[currentLine].length) {
+          setTypedText((prev) => {
+            const newText = [...prev];
+            newText[currentLine] = lines[currentLine].substring(0, currentChar + 1);
+            return newText;
+          });
+          currentChar++;
+        } else {
+          currentLine++;
+          currentChar = 0;
+        }
+      } else {
+        clearInterval(interval);
+      }
+    }, 15);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="w-full">
       {/* Header Banner Section */}
@@ -14,7 +48,7 @@ export const Hero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-8xl font-black tracking-tighter text-on-surface uppercase leading-none break-words">
               GDG_TACNA<span className="text-primary-container">.</span>AI
             </h1>
-            <div className="absolute -top-3 -right-2 sm:-top-4 sm:-right-8 bg-secondary px-2 py-0.5 text-[8px] sm:text-[10px] text-on-secondary font-bold tracking-widest whitespace-nowrap">
+            <div className="hidden sm:block absolute -top-4 -right-8 bg-secondary px-2 py-0.5 text-[10px] text-on-secondary font-bold tracking-widest whitespace-nowrap">
               STABLE_BUILD_2026
             </div>
           </div>
@@ -36,13 +70,11 @@ export const Hero = () => {
             </span>
             <TerminalCursor className="w-2 h-4 sm:w-3 sm:h-6 bg-primary-container ml-1 shrink-0" />
           </div>
-          <div className="font-mono text-secondary/80 ml-2 sm:ml-4 space-y-2 sm:space-y-1 text-xs sm:text-base whitespace-pre-wrap sm:whitespace-normal">
-            <p>&gt; Cargando módulos de Tacna... [OK]</p>
-            <p>&gt; Inicializando entorno de ejecución... [OK]</p>
-            <p>&gt; Verificando conectividad local... [OK]</p>
-            <p className="text-primary-container">
-              &gt; ACCESO CONCEDIDO: DESPLEGANDO EVENTOS_2026
-            </p>
+          <div className="font-mono text-secondary/80 ml-2 sm:ml-4 space-y-2 sm:space-y-1 text-xs sm:text-base whitespace-pre-wrap sm:whitespace-normal min-h-[6rem]">
+            {typedText[0].length > 0 && <p>{typedText[0]}</p>}
+            {typedText[1].length > 0 && <p>{typedText[1]}</p>}
+            {typedText[2].length > 0 && <p>{typedText[2]}</p>}
+            {typedText[3].length > 0 && <p className="text-primary-container">{typedText[3]}</p>}
           </div>
         </div>
       </section>
