@@ -1,11 +1,16 @@
 export const CallToAction = () => {
+  const registrationLink = 'https://gdg.community.dev/gdg-tacna/'; // Reemplaza esto con el link real de registro
+
   return (
     <section className="max-w-3xl mx-auto text-center border-t border-outline-variant pt-20">
       <div className="flex items-center justify-center gap-2 text-primary font-mono mb-8 text-sm md:text-base">
         <span className="text-secondary">invitado@gdgtacna:~$</span>
         <span className="text-on-surface">join_event --confirm</span>
       </div>
-      <button className="group relative w-full overflow-hidden">
+      <button
+        onClick={() => registrationLink !== '#' && window.open(registrationLink, '_blank')}
+        className="group relative w-full overflow-hidden"
+      >
         <div className="bg-surface-container border border-outline-variant px-6 py-8 text-on-surface font-mono text-lg md:text-2xl hover:bg-primary hover:text-white transition-all cursor-pointer">
           <pre className="whitespace-pre-wrap font-mono uppercase tracking-tighter">
             [ HAZ CLIC AQUÍ PARA REGISTRARTE Y RESERVAR TU LUGAR ]

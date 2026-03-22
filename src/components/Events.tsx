@@ -14,6 +14,7 @@ const EventCard = ({
   type,
   iconDate,
   iconType,
+  link,
 }: {
   icon: string;
   command: string;
@@ -23,6 +24,7 @@ const EventCard = ({
   type: string;
   iconDate: string;
   iconType: string;
+  link?: string;
 }) => {
   return (
     <motion.div
@@ -32,7 +34,8 @@ const EventCard = ({
       variants={{
         visible: { transition: { staggerChildren: 0.2 } },
       }}
-      className="group relative bg-surface border border-outline-variant hover:border-secondary transition-colors p-8 flex flex-col justify-between min-h-[320px] overflow-hidden"
+      onClick={() => link && window.open(link, '_blank')}
+      className={`group relative bg-surface border border-outline-variant hover:border-secondary transition-colors p-8 flex flex-col justify-between min-h-[320px] overflow-hidden ${link ? 'cursor-pointer' : ''}`}
     >
       <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
         <span className="material-symbols-outlined text-7xl">{icon}</span>
@@ -93,6 +96,7 @@ export const Events = () => {
           type="Prep session"
           iconDate="calendar_today"
           iconType="settings"
+          link="https://gdg.community.dev/events/details/google-gdg-tacna-presents-road-to-build-with-ai-tacna-2026/"
         />
         <EventCard
           icon="smart_toy"
@@ -103,6 +107,7 @@ export const Events = () => {
           type="Main event"
           iconDate="event"
           iconType="stars"
+          link="https://gdg.community.dev/events/details/google-gdg-tacna-presents-build-with-ai-tacna-2026/"
         />
       </div>
     </section>
