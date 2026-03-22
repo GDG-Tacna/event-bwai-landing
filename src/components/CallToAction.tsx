@@ -1,5 +1,5 @@
 export const CallToAction = () => {
-  const registrationLink = 'https://gdg.community.dev/gdg-tacna/'; // Reemplaza esto con el link real de registro
+  const registrationLink = 'https://gdg.community.dev/gdg-tacna/';
 
   return (
     <section className="max-w-3xl mx-auto text-center border-t border-outline-variant pt-20">
@@ -7,9 +7,11 @@ export const CallToAction = () => {
         <span className="text-secondary">invitado@gdgtacna:~$</span>
         <span className="text-on-surface">join_event --confirm</span>
       </div>
-      <button
-        onClick={() => registrationLink !== '#' && window.open(registrationLink, '_blank')}
-        className="group relative w-full overflow-hidden"
+      <a
+        href={registrationLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative w-full overflow-hidden block"
       >
         <div className="bg-surface-container border border-outline-variant px-6 py-8 text-on-surface font-mono text-lg md:text-2xl hover:bg-primary hover:text-white transition-all cursor-pointer">
           <pre className="whitespace-pre-wrap font-mono uppercase tracking-tighter">
@@ -17,7 +19,7 @@ export const CallToAction = () => {
           </pre>
         </div>
         <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-      </button>
+      </a>
       <p className="mt-6 text-on-surface-variant font-mono text-xs uppercase tracking-widest opacity-50">
         Cupos limitados. Módulos de IA en proceso de asignación.
       </p>
