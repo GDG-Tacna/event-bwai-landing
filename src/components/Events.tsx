@@ -32,7 +32,7 @@ const EventCard = ({
       variants={{
         visible: { transition: { staggerChildren: 0.2 } },
       }}
-      className="group relative bg-surface border border-[#064e3b] hover:border-secondary transition-colors p-8 flex flex-col justify-between min-h-[320px] overflow-hidden"
+      className="group relative bg-surface border border-outline-variant hover:border-secondary transition-colors p-8 flex flex-col justify-between min-h-[320px] overflow-hidden"
     >
       <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
         <span className="material-symbols-outlined text-7xl">{icon}</span>
@@ -75,10 +75,10 @@ const EventCard = ({
 
 export const Events = () => {
   return (
-    <section className="mb-24">
+    <section className="mb-24" id="events">
       <div className="flex items-center gap-3 mb-12">
-        <span className="text-primary-container font-mono text-base sm:text-xl">&gt;</span>
-        <h2 className="text-xl sm:text-3xl font-bold tracking-tight uppercase">
+        <span className="text-primary font-mono text-base sm:text-xl">&gt;</span>
+        <h2 className="text-xl sm:text-3xl font-bold tracking-tight uppercase text-on-surface">
           ./listar_eventos_ia --tacna
         </h2>
       </div>
