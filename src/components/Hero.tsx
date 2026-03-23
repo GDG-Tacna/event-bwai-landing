@@ -67,7 +67,7 @@ export const Hero = ({ theme = 'dark' }: HeroProps) => {
               GDG_TACNA<span className="text-primary">.</span>AI
             </h1>
             <div className="hidden sm:block absolute -top-4 -right-8 bg-secondary px-2 py-0.5 text-[10px] text-on-secondary font-bold tracking-widest whitespace-nowrap">
-              STABLE_BUILD_2026
+              VERSIÓN_ESTABLE_2026
             </div>
           </div>
         </div>
