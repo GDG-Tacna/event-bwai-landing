@@ -103,7 +103,7 @@ export const Events = () => {
           command="gemini run build-with-ai.py --project 'tacna'"
           title="Build with AI Tacna 2026"
           description="El evento principal donde construiremos soluciones reales utilizando modelos de Gemini."
-          date="11 de Abril, 2026"
+          date="16 de Mayo, 2026"
           type="Evento principal"
           iconDate="event"
           iconType="stars"
