@@ -92,7 +92,7 @@ export const Events = () => {
           command="bash install-dependencies.sh"
           title="Road to Build with AI Tacna 2026"
           description="Preparación técnica intensiva y configuración de entornos para la temporada de IA."
-          date="28 de Marzo, 2026"
+          date="Sábado 28 de Marzo, 2026"
           type="Sesión de preparación"
           iconDate="calendar_today"
           iconType="settings"
